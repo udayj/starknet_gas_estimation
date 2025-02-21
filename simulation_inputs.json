@@ -1,0 +1,255 @@
+[
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x3f",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "1"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x44",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "3"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x85",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "5"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0xc5",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "7"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x105",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "9"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x145",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "11"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x185",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "13"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x1c5",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "15"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x205",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "17"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x245",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "19"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x285",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "21"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x2c5",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "23"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x305",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "25"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x345",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "27"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x386",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "29"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x3c6",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "31"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x407",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "33"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x447",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "35"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x488",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "37"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x4c8",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "39"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x509",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "41"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x549",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "43"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x58a",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "45"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x5ca",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "47"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x60b",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "49"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x64b",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "51"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x68c",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "53"
+    },
+    {
+        "max_fee": "0x17852c6b9b31ac",
+        "token_from": "0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548",
+        "token_from_low": "0x6cd",
+        "token_to": "0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227",
+        "token_to_min_low": "0x1",
+        "price_distance": "0x100000000000000000000000000000000",
+        "ticks_crossed": "55"
+    }
+
+]

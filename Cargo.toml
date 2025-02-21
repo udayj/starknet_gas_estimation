@@ -1,0 +1,15 @@
+[package]
+name = "starknet_gas_estimation"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+csv = "1.1"
+chrono = "0.4"
+starknet-core = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "548d2dd" }
+starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "548d2dd" }
+starknet-ff = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "548d2dd", features = ["bigdecimal"] }
+avnu_starknet = { git = "ssh://git@github.com/avnu-labs/avnu-core", branch = "main" }
