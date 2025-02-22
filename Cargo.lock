@@ -138,7 +138,6 @@ checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 [[package]]
 name = "avnu_macros"
 version = "0.1.5"
-source = "git+ssh://git@github.com/avnu-labs/avnu-core?branch=main#9b0bfcc0c30e291ab7f07ffc9b7ee61d1e1ca30d"
 dependencies = [
  "log",
 ]
@@ -146,7 +145,6 @@ dependencies = [
 [[package]]
 name = "avnu_math"
 version = "0.1.5"
-source = "git+ssh://git@github.com/avnu-labs/avnu-core?branch=main#9b0bfcc0c30e291ab7f07ffc9b7ee61d1e1ca30d"
 dependencies = [
  "ethnum",
  "serde",
@@ -157,7 +155,6 @@ dependencies = [
 [[package]]
 name = "avnu_starknet"
 version = "0.1.5"
-source = "git+ssh://git@github.com/avnu-labs/avnu-core?branch=main#9b0bfcc0c30e291ab7f07ffc9b7ee61d1e1ca30d"
 dependencies = [
  "avnu_macros",
  "avnu_math",

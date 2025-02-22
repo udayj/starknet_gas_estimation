@@ -13,3 +13,6 @@ starknet-core = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "54
 starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "548d2dd" }
 starknet-ff = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "548d2dd", features = ["bigdecimal"] }
 avnu_starknet = { git = "ssh://git@github.com/avnu-labs/avnu-core", branch = "main" }
+
+[patch."ssh://git@github.com/avnu-labs/avnu-core"]
+avnu_starknet = { path ="../avnu_main/avnu-core/avnu_starknet" }

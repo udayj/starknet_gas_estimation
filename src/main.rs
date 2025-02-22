@@ -4,7 +4,7 @@ use avnu_starknet::{no_calldata, Address, BlockNumber, Error};
 use avnu_starknet::{DataAvailabilityMode, ResourceBounds, ResourceBoundsMapping};
 use avnu_starknet::{
     ExecutableInvokeTransaction, ExecutableTransaction, InvokeTransaction, InvokeTransactionV1,
-    InvokeTransactionV3,
+    InvokeTransactionV3, ExecutableInvokeTransactionV3
 };
 use csv::Writer;
 use serde::{Deserialize, Serialize};
@@ -27,6 +27,7 @@ struct SimulationResult {
     token_from: String,
     token_to: String,
     from_amount: String,
+    data_gas_consumed: String,
     gas_consumed: String,
     gas_price: String,
     overall_fee: String,
@@ -105,11 +106,11 @@ async fn simulate_transaction(
         ))
         .await
         .unwrap();
-
     Ok(SimulationResult {
         token_from: input.token_from.clone(),
         token_to: input.token_to.clone(),
         from_amount: input.token_from_low.clone(),
+        data_gas_consumed: result.fee_estimation.data_gas_consumed.to_string(),
         gas_consumed: result.fee_estimation.gas_consumed.to_string(),
         gas_price: result.fee_estimation.gas_price.to_string(),
         overall_fee: result.fee_estimation.overall_fee.to_string(),
@@ -120,31 +121,32 @@ async fn simulate_transaction(
 async fn simulate_transaction_v3(
     input: &SimulationInput,
     account_address: &FieldElement,
+    nonce: &FieldElement
 ) -> Result<SimulationResult, Box<dyn std::error::Error>> {
     // Get the current nonce
 
     println!("Simulation for TX V3");
     let client = client();
-    let nonce = get_nonce(account_address).await?;
+
 
     let tx1 = InvokeTransactionV3 {
         transaction_hash: FieldElement::from_str("0x0")?,
-        nonce,
+        nonce: *nonce,
         resource_bounds: ResourceBoundsMapping {
             l1_gas: ResourceBounds {
-                max_amount: 500,
-                max_price_per_unit: 45482573982463,
+                max_amount: 30000,
+                max_price_per_unit: 47519263922480,
             },
             l2_gas: ResourceBounds {
-                max_amount: 500,
-                max_price_per_unit: 45482573982463,
+                max_amount: 30000,
+                max_price_per_unit: 47519263922480,
             },
         },
         tip: 0,
         paymaster_data: vec![],
         account_deployment_data: vec![],
-        nonce_data_availability_mode: DataAvailabilityMode::L1,
-        fee_data_availability_mode: DataAvailabilityMode::L1,
+        nonce_data_availability_mode: DataAvailabilityMode::L2,
+        fee_data_availability_mode: DataAvailabilityMode::L2,
         sender_address: *account_address,
         signature: Vec::new(),
         calldata: vec![
@@ -188,7 +190,7 @@ async fn simulate_transaction_v3(
 
     let result = client
         .simulate(ExecutableTransaction::Invoke(
-            ExecutableInvokeTransaction::from((InvokeTransaction::V3(tx1))),
+            ExecutableInvokeTransaction::from(InvokeTransaction::V3(tx1)),
         ))
         .await
         .unwrap();
@@ -196,6 +198,7 @@ async fn simulate_transaction_v3(
         token_from: input.token_from.clone(),
         token_to: input.token_to.clone(),
         from_amount: input.token_from_low.clone(),
+        data_gas_consumed: result.fee_estimation.data_gas_consumed.to_string(),
         gas_consumed: result.fee_estimation.gas_consumed.to_string(),
         gas_price: result.fee_estimation.gas_price.to_string(),
         overall_fee: result.fee_estimation.overall_fee.to_string(),
@@ -215,11 +218,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     )?;
 
     // Create CSV writer for results
-    let mut writer = Writer::from_path("simulation_results_new.csv")?;
+    let mut writer = Writer::from_path("simulation_results_v3.csv")?;
     writer.write_record([
         "token_from",
         "token_to",
         "from_amount",
+        "data_gas_consumed",
         "gas_consumed",
         "gas_price",
         "overall_fee",
@@ -229,12 +233,13 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let nonce = get_nonce(&account_address).await?;
     // Process each simulation input
     for input in inputs {
-        match simulate_transaction(&input, &account_address, &nonce).await {
+        match simulate_transaction_v3(&input, &account_address, &nonce).await {
             Ok(result) => {
                 println!("Simulation Result:");
                 println!("Token From: {}", result.token_from);
                 println!("Token To: {}", result.token_to);
                 println!("From Amount: {}", result.from_amount);
+                println!("Data Gas Consumed: {}", result.data_gas_consumed);
                 println!("Gas Consumed: {}", result.gas_consumed);
                 println!("Gas Price: {}", result.gas_price);
                 println!("Overall Fee: {}", result.overall_fee);
@@ -244,6 +249,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     &result.token_from,
                     &result.token_to,
                     &result.from_amount,
+                    &result.data_gas_consumed,
                     &result.gas_consumed,
                     &result.gas_price,
                     &result.overall_fee,
