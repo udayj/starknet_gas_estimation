@@ -36,7 +36,8 @@ struct SimulationResult {
 }
 
 fn client() -> Client {
-    Client::new("https://sepolia.juno.avnu.fi")
+    //Client::new("https://sepolia.juno.avnu.fi")
+    Client::new("https://sepolia.juno.avnu.fi/v0_7")
 }
 
 async fn get_nonce(
@@ -90,8 +91,8 @@ async fn simulate_transaction(
             )?, // exchange address
             FieldElement::from_str("0xe8d4a51000")?, // percentage
             FieldElement::from_str("0x6")?, // no. of additional params
-            FieldElement::from_str("0x02655c0a29305847e0d9ca1ae3045ffb8a20348d8d3a5afc71ed867a6152f227")?, // token 0 of pool
-            FieldElement::from_str("0x044d6289f59bf28e2d9c1924e0f6753039932b80e404d01c54ab65e0411f0548")?, // token 1 of pool
+            FieldElement::from_str("0x4c97389b183b0fee4490192338bab407430078e46dfdab72b5c986bb9a2196d")?, // token 0 of pool
+            FieldElement::from_str("0x78a1025dcc7077da3889ed79c0710d982b5893c007d2ff4d252e0a42a06bafa")?, // token 1 of pool
             FieldElement::from_str("0x0")?, // fee
             FieldElement::from_str("0x80")?, // tick spacing
             FieldElement::from_str(
@@ -108,6 +109,7 @@ async fn simulate_transaction(
         .await
         .unwrap();
     //println!("Trace:{:#?}", result.transaction_trace);
+    println!("Fee:{:#?}",result.fee_estimation);
     Ok(SimulationResult {
         token_from: input.token_from.clone(),
         token_to: input.token_to.clone(),
@@ -136,19 +138,19 @@ async fn simulate_transaction_v3(
         nonce: *nonce,
         resource_bounds: ResourceBoundsMapping {
             l1_gas: ResourceBounds {
-                max_amount: 30000,
+                max_amount: 3000,
                 max_price_per_unit: 589339005056672,
             },
             l2_gas: ResourceBounds {
-                max_amount: 30000,
+                max_amount: 3000,
                 max_price_per_unit: 589339005056672,
             },
         },
         tip: 0,
         paymaster_data: vec![],
         account_deployment_data: vec![],
-        nonce_data_availability_mode: DataAvailabilityMode::L2,
-        fee_data_availability_mode: DataAvailabilityMode::L2,
+        nonce_data_availability_mode: DataAvailabilityMode::L1,
+        fee_data_availability_mode: DataAvailabilityMode::L1,
         sender_address: *account_address,
         signature: Vec::new(),
         calldata: vec![
@@ -179,8 +181,8 @@ async fn simulate_transaction_v3(
             )?, // exchange address
             FieldElement::from_str("0xe8d4a51000")?, // percentage
             FieldElement::from_str("0x6")?, // no. of additional params
-            FieldElement::from_str(&input.token_to)?, // token 0 of pool
-            FieldElement::from_str(&input.token_from)?, // token 1 of pool
+            FieldElement::from_str("0x4c97389b183b0fee4490192338bab407430078e46dfdab72b5c986bb9a2196d")?, // token 0 of pool
+            FieldElement::from_str("0x78a1025dcc7077da3889ed79c0710d982b5893c007d2ff4d252e0a42a06bafa")?, // token 1 of pool
             FieldElement::from_str("0x0")?, // fee
             FieldElement::from_str("0x80")?, // tick spacing
             FieldElement::from_str(
@@ -196,7 +198,7 @@ async fn simulate_transaction_v3(
         ))
         .await
         .unwrap();
-    //println!("Trace:{:#?}", result.transaction_trace);
+    println!("Trace:{:#?}", result.transaction_trace);
     Ok(SimulationResult {
         token_from: input.token_from.clone(),
         token_to: input.token_to.clone(),
@@ -244,7 +246,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     return Ok(());*/
     // Read simulation inputs from JSON file
-    let file = File::open("simulation_inputs_rev.json")?;
+    let file = File::open("simulation_inputs.json")?;
     let inputs: Vec<SimulationInput> = serde_json::from_reader(file)?;
 
     // Set account address
@@ -253,7 +255,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     )?;
 
     // Create CSV writer for results
-    let mut writer = Writer::from_path("simulation_results_rev.csv")?;
+    let mut writer = Writer::from_path("simulation_results.csv")?;
     writer.write_record([
         "token_from",
         "token_to",
@@ -268,8 +270,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let nonce = get_nonce(&account_address).await?;
     // Process each simulation input
     for input in inputs {
-        if(input.token_from_low!="0x60b") {
-            //continue;
+        if(input.token_from_low!="0x3f") {
+            continue;
         }
         match simulate_transaction(&input, &account_address, &nonce).await {
             Ok(result) => {
